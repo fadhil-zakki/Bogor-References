@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>BogorReferences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-img">BR</div>
+      <span>BogorReferences</span>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <ul id="menu">
+      <li><a onclick="showPage('home')" class="active">Home</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('rekomendasi')">Rekomendasi</a></li>
+      <li><a onclick="showPage('partnership')">Partnership</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGES -->
+  <main>
+    <div id="home" class="page active"></div>
+    <div id="about" class="page"></div>
+    <div id="rekomendasi" class="page"></div>
+    <div id="partnership" class="page"></div>
+    <div id="contact" class="page"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>© 2026 BogorReferences</strong></p>
+    <p>Media kurasi lokal seputar kuliner & wisata Bogor</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
