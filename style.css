@@ -1,0 +1,28 @@
+body {
+  font-family: serif;
+  margin: 40px;
+}
+
+header ul {
+  list-style: none;
+  padding: 0;
+}
+
+header ul li {
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a.btn {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+}
