@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>BogorReferences</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BogorReferences - Panduan Kuliner, Nongkrong & Wisata Bogor</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo" onclick="showPage('home')">
-      <div class="logo-img">BR</div>
-      <span>BogorReferences</span>
+<nav>
+    <div class="logo" data-page="home">
+        <div class="logo-img">BR</div>
+        <span>BogorReferences</span>
     </div>
 
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <button class="menu-toggle">☰</button>
 
     <ul id="menu">
-      <li><a onclick="showPage('home')" class="active">Home</a></li>
-      <li><a onclick="showPage('about')">About</a></li>
-      <li><a onclick="showPage('rekomendasi')">Rekomendasi</a></li>
-      <li><a onclick="showPage('partnership')">Partnership</a></li>
-      <li><a onclick="showPage('contact')">Contact</a></li>
+        <li><a data-page="home" class="active">Home</a></li>
+        <li><a data-page="about">About</a></li>
+        <li><a data-page="rekomendasi">Rekomendasi</a></li>
+        <li><a data-page="partnership">Partnership</a></li>
+        <li><a data-page="contact">Contact</a></li>
     </ul>
-  </nav>
+</nav>
 
-  <!-- PAGES -->
-  <main>
-    <div id="home" class="page active"></div>
-    <div id="about" class="page"></div>
-    <div id="rekomendasi" class="page"></div>
-    <div id="partnership" class="page"></div>
-    <div id="contact" class="page"></div>
-  </main>
+<!-- HOME -->
+<div id="home" class="page active">
+    <section class="hero">
+        <h1>Welcome To BogorReferences</h1>
+        <p>Panduan Kuliner, Nongkrong, dan Wisata Terbaik di Bogor</p>
+        <button class="cta-btn" data-page="rekomendasi">Lihat Rekomendasi</button>
+    </section>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
+<!-- ABOUT -->
+<div id="about" class="page">
+    <div class="page-hero hero-about">
+        <h1>Who We Are?</h1>
+    </div>
+    <!-- content tetap sama -->
+</div>
+
+<!-- REKOMENDASI -->
+<div id="rekomendasi" class="page">
+    <div class="page-hero hero-rekomendasi">
+        <h1>Rekomendasi Pilihan</h1>
+    </div>
+</div>
+
+<!-- PARTNERSHIP -->
+<div id="partnership" class="page">
+    <div class="page-hero hero-partnership">
+        <h1>Partnership</h1>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+    <div class="page-hero hero-contact">
+        <h1>Contact Us</h1>
+    </div>
+</div>
+
+<footer>
     <p><strong>© 2026 BogorReferences</strong></p>
-    <p>Media kurasi lokal seputar kuliner & wisata Bogor</p>
-  </footer>
+    <p>Media kurasi lokal Bogor</p>
+</footer>
 
-  <!-- JS -->
-  <script src="js/main.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
