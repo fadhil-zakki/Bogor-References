@@ -1,16 +1,27 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* NAVBAR */
 .navbar {
+  background: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -19,35 +30,117 @@
   gap: 10px;
 }
 
-.logo-box {
+.logo-img {
   background: black;
   color: white;
-  padding: 8px 10px;
   font-weight: bold;
+  padding: 8px 10px;
 }
 
-.nav-menu {
-  display: flex;
+#menu {
   list-style: none;
-  gap: 20px;
+  display: flex;
+  gap: 25px;
 }
 
-.nav-menu a {
+#menu a {
   text-decoration: none;
-  color: black;
+  color: #333;
   font-weight: 500;
 }
 
-.nav-menu a:hover {
-  text-decoration: underline;
+#menu a.active {
+  border-bottom: 2px solid black;
 }
 
-.content {
-  padding: 40px;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
 }
 
-footer {
-  padding: 20px;
+/* HERO */
+.page-hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
+  padding: 20px;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* CONTENT */
+.content-section {
+  background: white;
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: black;
+  margin: 15px auto 30px;
+}
+
+.content-text {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
   color: #777;
+  background: #fff;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
