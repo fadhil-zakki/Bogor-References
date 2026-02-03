@@ -138,3 +138,15 @@ footer {
     font-size: 30px;
   }
 }
+
+.section-title {
+  text-align: center;
+}
+
+.underline {
+  width: 90px;
+  height: 4px;
+  background: #1b5e20;
+  margin: 12px auto 40px;
+  border-radius: 2px;
+}
