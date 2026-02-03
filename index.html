@@ -1,70 +1,38 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>BogorReferences</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>BogorReferences</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h2>BR<br>BogorReferences</h2>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="rekomendasi.html">Rekomendasi</a></li>
-      <li><a href="partnership.html">Partnership</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<div class="hero">
-  <div>
-    <h1>BogorReferences</h1>
-    <p>Panduan Kuliner, Nongkrong, dan Wisata Terbaik di Bogor</p>
-    <div class="btn-group">
-      <a href="rekomendasi.html" class="btn">Lihat Rekomendasi</a>
-      <a href="about.html" class="btn secondary">Jelajahi Bogor</a>
-    </div>
+<nav>
+  <div class="logo">
+    <div class="logo-img">BR</div>
+    <span>BogorReferences</span>
   </div>
+  <button class="menu-toggle">☰</button>
+  <ul id="menu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="rekomendasi.html">Rekomendasi</a></li>
+    <li><a href="partnership.html">Partnership</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero" style="background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('images/home.jpg') center/cover">
+  <h1>BogorReferences</h1>
 </div>
 
-<section>
-  <h2 class="section-title">Apa yang Kami Rekomendasikan</h2>
+<section class="content-section">
+  <h2 class="section-title">Referensi Terbaik Bogor</h2>
   <div class="underline"></div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/kuliner.jpg">
-      <h3>🍜 Kuliner</h3>
-      <p>UMKM, tempat makan lokal, hingga hidden gem.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/cafe.jpg">
-      <h3>☕ Kafe & Nongkrong</h3>
-      <p>Ngopi, kerja, dan quality time yang nyaman.</p>
-    </div>
-
-    <div class="card">
-      <img src="images/wisata.jpg">
-      <h3>🌿 Wisata & Staycation</h3>
-      <p>Alam, villa, dan penginapan pilihan.</p>
-    </div>
-
-    <div class="card">
-      <h3>💸 Budget Friendly</h3>
-      <p>Rekomendasi seru yang ramah di kantong.</p>
-    </div>
-  </div>
+  <p>Media kurasi tempat, UMKM, dan brand lokal Bogor yang layak dikenal.</p>
 </section>
 
-<footer>
-  <p>© 2026 BogorReferences</p>
-  <small>Media kurasi lokal Bogor</small>
-</footer>
-
+<footer>© 2026 BogorReferences</footer>
+<script src="script.js"></script>
 </body>
 </html>
