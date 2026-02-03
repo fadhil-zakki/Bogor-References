@@ -12,8 +12,14 @@ body {
 }
 
 /* HEADER / NAV */
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
 header, nav {
-  background: #111;
+  background: #0b3d2e;
   color: #fff;
   padding: 15px 40px;
   display: flex;
@@ -42,11 +48,10 @@ nav a.active {
   color: #f4c430;
 }
 
-.logo img {
-  height: 60px;
-  width: auto;
+nav a.active {
+  color: #f4c430;
+  font-weight: bold;
 }
-
 
 /* HERO */
 .hero {
