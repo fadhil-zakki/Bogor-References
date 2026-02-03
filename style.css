@@ -1,3 +1,6 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -11,58 +14,71 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER / NAV */
+/* =========================
+   NAVBAR
+========================= */
+header,
+nav {
+  background: #1f7a3f; /* HIJAU UTAMA */
+  color: #fff;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
 .logo img {
-  height: 78x;
+  height: 60px; /* BESAR LOGO */
   width: auto;
 }
 
-header, nav {
-  background: #0b3d2e;
-  color: #fff;
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo span {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-header h2 {
-  line-height: 1.1;
-}
-
-nav ul {
+/* MENU */
+nav ul,
+header nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 28px;
 }
 
-nav a {
-  color: #fff;
+nav a,
+header nav a {
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
+  transition: .2s ease;
 }
 
 nav a:hover,
-nav a.active {
-  color: #f4c430;
+nav a.active,
+header nav a:hover {
+  opacity: .85;
 }
 
-nav a.active {
-  color: #f4c430;
-  font-weight: bold;
-}
-
-/* HERO */
+/* =========================
+   HERO (HOMEPAGE)
+========================= */
 .hero {
-  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-              url("images/hero.jpg") center/cover;
   height: 85vh;
-  color: #fff;
+  background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+              url("assets/images/hero.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #fff;
   padding: 20px;
 }
 
@@ -73,23 +89,29 @@ nav a.active {
 
 .hero p {
   font-size: 18px;
-  max-width: 700px;
+  max-width: 720px;
   margin: auto;
 }
 
+/* CTA */
 .btn-group {
   margin-top: 30px;
 }
 
 .btn {
+  display: inline-block;
+  padding: 12px 26px;
+  margin: 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
   background: #f4c430;
   color: #111;
-  padding: 12px 25px;
-  margin: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  display: inline-block;
+  transition: .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn.secondary {
@@ -98,27 +120,37 @@ nav a.active {
   color: #f4c430;
 }
 
-/* SECTION */
+/* =========================
+   SECTION GLOBAL
+========================= */
 section {
-  padding: 70px 40px;
+  padding: 80px 40px;
   max-width: 1100px;
   margin: auto;
 }
 
 .section-title {
-  text-align: center;
   font-size: 32px;
-  margin-bottom: 15px;
+  text-align: center;
 }
 
 .underline {
   width: 60px;
   height: 4px;
-  background: #f4c430;
-  margin: 10px auto 40px;
+  background: #1f7a3f;
+  margin: 12px auto 40px;
 }
 
-/* GRID */
+.content-text {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* =========================
+   GRID & CARD
+========================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -128,18 +160,20 @@ section {
 .card {
   background: #fff;
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  border-radius: 12px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 15px;
 }
 
-/* PAGE HERO */
+/* =========================
+   PAGE HERO (ABOUT / PARTNER)
+========================= */
 .page-hero {
   height: 45vh;
   display: flex;
@@ -151,11 +185,38 @@ section {
   text-align: center;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
   background: #111;
   color: #aaa;
   text-align: center;
-  padding: 30px;
-  margin-top: 60px;
+  padding: 35px 20px;
+  margin-top: 80px;
+}
+
+footer small {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  nav ul,
+  header nav ul {
+    gap: 16px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .logo img {
+    height: 50px;
+  }
 }
