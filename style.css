@@ -220,3 +220,40 @@ footer small {
     height: 50px;
   }
 }
+
+/* =========================
+   TAMPILAN DI HP
+========================= */
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    width: 100%;
+    justify-content: center;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}
+
+p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   CARD HOVER HALUS
+========================= */
+.card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,.15);
+}
+
+
