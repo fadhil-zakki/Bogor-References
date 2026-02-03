@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>About - BogorReferences</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bogorreferences</title>
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<nav>
-  <div class="nav-container">
-    <div class="logo">
-      <div class="logo-box">BR</div>
-      <span>BogorReferences</span>
+  <!-- navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-box">br</div>
+        <span>bogorreferences</span>
+      </a>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-menu" id="menu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="rekomendasi.html">rekomendasi</a></li>
+        <li><a href="partnership.html">partnership</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Rekomendasi</a></li>
-      <li><a href="#">Partnership</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <!-- page content -->
+  <main>
+    <!-- isi beda tiap page -->
+  </main>
 
-<div class="page-hero" style="background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('images/about.jpg') center/cover">
-  <h1>About Us</h1>
-</div>
+  <!-- footer -->
+  <footer class="footer">
+    <p>© 2026 bogorreferences</p>
+    <p>kurasi lokal kuliner, wisata & lifestyle bogor</p>
+  </footer>
 
-<section class="content-section">
-  <h2 class="section-title">Tentang BogorReferences</h2>
-  <div class="underline"></div>
-  <p>BogorReferences adalah media independen yang mengkurasi tempat, produk, dan kolaborasi lokal Bogor.</p>
-</section>
-
-<footer>© 2026 BogorReferences</footer>
-<script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
