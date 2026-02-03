@@ -1,46 +1,650 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>About - BogorReferences</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BogorReferences - Panduan Kuliner, Nongkrong & Wisata Bogor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            background: #0a5c3e;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover, nav a.active {
+            color: #f9a825;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Container */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-btn {
+            background: #f9a825;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .cta-btn:hover {
+            background: #f57f17;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(249, 168, 37, 0.3);
+        }
+
+        /* Page Hero */
+        .page-hero {
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+            margin-top: 60px;
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 5%;
+            background: white;
+        }
+
+        .content-section.gray {
+            background: #f5f5f5;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #0a5c3e;
+        }
+
+        .underline {
+            width: 80px;
+            height: 4px;
+            background: #f9a825;
+            margin: 0 auto 3rem;
+        }
+
+        /* About Page Specific */
+        .about-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .vision-mission {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .vm-card {
+            background: #f5f5f5;
+            padding: 3rem;
+            border-radius: 10px;
+            border-left: 5px solid #f9a825;
+        }
+
+        .vm-card h3 {
+            font-size: 2rem;
+            color: #0a5c3e;
+            margin-bottom: 1rem;
+        }
+
+        .vm-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .vm-card ul li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .vm-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f9a825;
+            font-weight: bold;
+        }
+
+        /* Rekomendasi/Project Page */
+        .filter-tabs {
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 2px solid #0a5c3e;
+            color: #0a5c3e;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #0a5c3e;
+            color: white;
+        }
+
+        .project-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-category {
+            display: inline-block;
+            background: #f9a825;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #0a5c3e;
+        }
+
+        .project-location {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .project-content p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #f5f5f5;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        /* Partnership Page */
+        .partnership-intro {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-item h3 {
+            color: #0a5c3e;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-cta {
+            max-width: 800px;
+            margin: 4rem auto 0;
+            background: linear-gradient(135deg, #0a5c3e, #0d7a52);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .partnership-cta h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-cta p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Contact Page */
+        .contact-methods {
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #0a5c3e;
+        }
+
+        .contact-info {
+            max-width: 600px;
+            margin: 4rem auto;
+            background: #f5f5f5;
+            padding: 3rem;
+            border-radius: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .info-icon {
+            font-size: 1.5rem;
+            color: #f9a825;
+        }
+
+        .info-item a {
+            color: #0a5c3e;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: #f9a825;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #f57f17;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.95);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h1, .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-grid,
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-tabs {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo" onclick="showPage('home')">
+            <div class="logo-img">BR</div>
+            <span>BogorReferences</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="menu">
+            <li><a onclick="showPage('home')" class="active">Home</a></li>
+            <li><a onclick="showPage('about')">About</a></li>
+            <li><a onclick="showPage('rekomendasi')">Rekomendasi</a></li>
+            <li><a onclick="showPage('partnership')">Partnership</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- NAVBAR -->
-<nav>
-  <div class="logo">
-    <img src="assets/images/logo.png" alt="BogorReferences Logo">
-  </div>
+      <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="page-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920') center/cover;">
+            <h1>Who We Are?</h1>
+        </div>
 
-  <ul id="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="rekomendasi.html">Rekomendasi</a></li>
-    <li><a href="partnership.html">Partnership</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+        <section class="content-section">
+            <h2 class="section-title">Tentang BogorReferences</h2>
+            <div class="underline"></div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <p><strong>BogorReferences</strong> adalah media digital lokal yang menyajikan rekomendasi kuliner, tempat nongkrong, dan wisata di wilayah Bogor dan sekitarnya.</p>
+                    <p>Kami hadir untuk membantu kamu menemukan tempat terbaik tanpa harus membuang waktu mencoba semuanya satu per satu. Semua rekomendasi dikurasi berdasarkan pengalaman, riset, dan sudut pandang yang objektif.</p>
+                    <p>Dari tempat makan UMKM tersembunyi hingga destinasi wisata yang instagramable, kami pastikan setiap rekomendasi memiliki nilai lebih yang worth it untuk dikunjungi.</p>
+                </div>
+                <div class="about-img" style="background-image: url('https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=800');"></div>
+            </div>
 
-<!-- PAGE HERO -->
-<div class="page-hero" style="background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('assets/images/about.jpg') center/cover;">
-  <h1>Who We Are?</h1>
-</div>
+            <div class="vision-mission">
+                <div class="vm-card">
+                    <h3>Visi</h3>
+                    <p>Menjadi media referensi lokal utama seputar kuliner, wisata, dan gaya hidup di Bogor yang dipercaya oleh masyarakat lokal dan wisatawan.</p>
+                </div>
+                <div class="vm-card">
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Mengkurasi tempat terbaik secara objektif dan jujur</li>
+                        <li>Mendukung pertumbuhan UMKM dan bisnis lokal Bogor</li>
+                        <li>Menjadi jembatan antara brand dan audiens lokal</li>
+                        <li>Memberikan informasi yang ringkas dan relevan</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-<!-- CONTENT -->
-<section>
-  <h2 class="section-title">Tentang BogorReferences</h2>
-  <div class="underline"></div>
-
-  <p style="max-width:800px;margin:auto;text-align:center;">
-    BogorReferences adalah media kurasi lokal yang menyajikan rekomendasi kuliner,
-    tempat nongkrong, dan wisata terbaik di Bogor.
-  </p>
-</section>
-
-<footer>
-  <p>© 2026 BogorReferences</p>
-</footer>
-
-</body>
-</html>
+        <section class="content-section gray">
+            <h2 class="section-title">Kenapa BogorReferences?</h2>
+            <div class="underline"></div>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">📍</div>
+                    <h3>Fokus Lokal</h3>
+                    <p>Spesialisasi pada wilayah Bogor dan sekitarnya</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">✨</div>
+                    <h3>Kurasi Jujur</h3>
+                    <p>Rekomendasi objektif berdasarkan pengalaman nyata</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">📝</div>
+                    <h3>Info Lengkap</h3>
+                    <p>Detail harga, lokasi, dan suasana yang transparan</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🤝</div>
+                    <h3>Dukung UMKM</h3>
+                    <p>Mendukung bisnis lokal dan UMKM Bogor</p>
+                </div>
+            </div>
+        </section>
+    </div>
