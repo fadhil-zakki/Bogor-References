@@ -1,121 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>kerja sama — bogorreferences</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- navbar -->
-  <header class="navbar">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="logo">br<span>bogorreferences</span></a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="rekomendasi.html">rekomendasi</a></li>
-          <li><a href="about.html">tentang</a></li>
-          <li><a href="kerja-sama.html" class="active">kerja sama</a></li>
-          <li><a href="kontak.html">kontak</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-box">br</div>
+        <span>bogorreferences</span>
+      </a>
 
-  <!-- main -->
-  <main class="section">
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <ul class="nav-menu" id="menu">
+        <li><a href="index.html">home</a></li>
+        <li><a href="rekomendasi.html">rekomendasi</a></li>
+        <li><a href="about.html">tentang</a></li>
+        <li><a href="partnership.html" class="active">kerja sama</a></li>
+        <li><a href="contact.html">kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- page hero -->
+  <section class="page-hero">
+    <h1>kerja sama & partnership</h1>
+  </section>
+
+  <!-- intro -->
+  <section class="section">
     <div class="container">
+      <p class="section-desc">
+        bogorreferences membuka kesempatan kerja sama dengan umkm, kafe,
+        restoran, tempat wisata, hingga brand lokal.
+      </p>
 
-      <!-- header -->
-      <header class="section-header">
-        <h1>kerja sama & partnership</h1>
-        <p>
-          bogorreferences membuka kesempatan kerja sama dengan umkm, kafe,
-          restoran, tempat wisata, dan brand lokal di bogor.
-        </p>
-      </header>
-
-      <!-- bentuk kerja sama -->
-      <section class="content-block">
-        <h2>bentuk kerja sama</h2>
-        <ul class="criteria-list">
-          <li>review & liputan tempat</li>
-          <li>konten instagram & website</li>
-          <li>media exposure</li>
-          <li>campaign & event coverage</li>
-        </ul>
-
-        <p class="section-note">
-          kami terbuka untuk diskusi dan penyesuaian sesuai kebutuhan brand.
-        </p>
-      </section>
-
-      <!-- partner -->
-      <section class="content-block">
-        <h2>partner yang pernah bekerja sama</h2>
-
-        <div class="partner-grid">
-
-          <article class="partner-card">
-            <h3>kala</h3>
-            <p>
-              ruang kreatif dan tempat nongkrong dengan konsep hangat
-              dan kolaboratif.
-            </p>
-            <a href="https://www.instagram.com/kalakita.space?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
-              kunjungi instagram →
-            </a>
-          </article>
-
-          <article class="partner-card">
-            <h3>taman teduh</h3>
-            <p>
-              kafe bernuansa alam dengan suasana tenang dan nyaman
-              di bogor.
-            </p>
-            <a href="https://www.instagram.com/tamanteduhkafe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
-              kunjungi instagram →
-            </a>
-          </article>
-
-          <article class="partner-card">
-            <h3>wander</h3>
-            <p>
-              media dan panduan perjalanan untuk eksplorasi tempat
-              dan pengalaman lokal.
-            </p>
-            <a href="https://www.instagram.com/wanderguide.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
-              kunjungi instagram →
-            </a>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- cta -->
-      <section class="content-block cta-block">
-        <h2>tertarik bekerja sama?</h2>
-        <p>
-          hubungi kami untuk proposal kerja sama atau diskusi lebih lanjut.
-        </p>
-        <a href="kontak.html" class="btn-primary">hubungi kami</a>
-      </section>
-
+      <p class="section-desc">
+        kami percaya kolaborasi yang tepat bisa menghadirkan exposure
+        yang relevan dan berdampak.
+      </p>
     </div>
-  </main>
+  </section>
+
+  <!-- bentuk kerja sama -->
+  <section class="section gray">
+    <div class="container">
+      <h2 class="section-title">bentuk kerja sama</h2>
+      <div class="underline"></div>
+
+      <ul class="list">
+        <li>review & liputan tempat</li>
+        <li>konten instagram & website</li>
+        <li>media exposure</li>
+        <li>campaign & event coverage</li>
+      </ul>
+
+      <p class="section-desc">
+        kami terbuka untuk diskusi dan penyesuaian sesuai kebutuhan brand.
+      </p>
+    </div>
+  </section>
+
+  <!-- partner -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">partner & kolaborator</h2>
+      <div class="underline"></div>
+
+      <div class="grid-auto">
+
+        <div class="card">
+          <h3>kala</h3>
+          <p>ruang kreatif dan tempat berkumpul dengan konsep yang hangat.</p>
+          <a
+            href="https://www.instagram.com/kalakita.space?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="btn secondary"
+          >
+            lihat instagram
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>taman teduh</h3>
+          <p>kafe dengan suasana asri dan nyaman untuk bersantai.</p>
+          <a
+            href="https://www.instagram.com/tamanteduhkafe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="btn secondary"
+          >
+            lihat instagram
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>wander</h3>
+          <p>platform eksplorasi dan panduan perjalanan.</p>
+          <a
+            href="https://www.instagram.com/wanderguide.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="btn secondary"
+          >
+            lihat instagram
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- cta -->
+  <section class="section gray">
+    <div class="container center">
+      <h2 class="section-title">tertarik bekerja sama?</h2>
+      <p class="section-desc">
+        hubungi kami untuk proposal dan diskusi lebih lanjut.
+      </p>
+
+      <a href="contact.html" class="btn primary">
+        hubungi kami
+      </a>
+    </div>
+  </section>
 
   <!-- footer -->
   <footer class="footer">
-    <div class="container footer-content">
-      <p>© 2026 bogorreferences</p>
-      <p>
-        media kurasi lokal seputar kuliner, wisata, dan gaya hidup di bogor.
-        seluruh rekomendasi berdasarkan pengalaman dan riset.
-      </p>
-    </div>
+    <p>© 2026 bogorreferences</p>
+    <p>media kurasi lokal seputar kuliner, wisata, dan gaya hidup di bogor.</p>
+    <p>seluruh rekomendasi berdasarkan pengalaman dan riset.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
