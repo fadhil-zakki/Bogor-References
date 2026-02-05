@@ -579,3 +579,53 @@ hero background image & overlay
   }
 }
 
+/* =========================
+   Test 
+========================= */
+
+.ig-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.ig-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.ig-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ig-bio {
+  color: #555;
+  margin: .5rem 0 1rem;
+}
+
+.ig-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ig-highlights {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.ig-highlights span {
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  background: var(--gray);
+  font-size: .85rem;
+}
+
