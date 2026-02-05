@@ -189,6 +189,37 @@ img {
   text-shadow: 0 10px 30px rgba(0,0,0,.4);
 }
 
+/* ==============================
+hero background image & overlay
+================================= */
+.hero {
+  position: relative;
+  background-image: url("assets/images/hero-bogor.jpg");
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* optional text refinement */
+.hero h1 {
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+
 /* =========================
    buttons
 ========================= */
@@ -311,8 +342,10 @@ img {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   about team section 
+========================= */
 
-/* about team section */
 .about-team {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -331,7 +364,10 @@ img {
   display: inline-block;
 }
 
-/* responsive */
+/* =========================
+   responsive  
+========================= */
+
 @media (max-width: 768px) {
   .about-team {
     grid-template-columns: 1fr;
