@@ -1,45 +1,116 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bogorreferences</title>
-
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rekomendasi bogorreferences</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- navbar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <div class="logo-box">br</div>
-        <span>bogorreferences</span>
-      </a>
-
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-      <ul class="nav-menu" id="menu">
-        <li><a href="index.html">home</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="rekomendasi.html">rekomendasi</a></li>
-        <li><a href="partnership.html">partnership</a></li>
-        <li><a href="contact.html">contact</a></li>
-      </ul>
+  <!-- header / navbar -->
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">br<span>bogorreferences</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="rekomendasi.html" class="active">rekomendasi</a></li>
+          <li><a href="about.html">tentang</a></li>
+          <li><a href="kerja-sama.html">kerja sama</a></li>
+          <li><a href="kontak.html">kontak</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- page content -->
-  <main>
-    <!-- isi beda tiap page -->
+  <!-- main content -->
+  <main class="section">
+    <div class="container">
+
+      <!-- heading -->
+      <header class="section-header">
+        <h1>rekomendasi pilihan bogorreferences</h1>
+        <p>
+          temukan berbagai rekomendasi tempat terbaik di bogor, mulai dari kuliner,
+          kafe, hingga wisata alam. setiap tempat dipilih secara kurasi berdasarkan
+          pengalaman dan riset.
+        </p>
+      </header>
+
+      <!-- kriteria -->
+      <section class="criteria">
+        <h2>dasar kurasi kami</h2>
+        <ul class="criteria-list">
+          <li>lokasi & akses yang masuk akal</li>
+          <li>harga & value yang sepadan</li>
+          <li>suasana & pengalaman</li>
+          <li>keunikan tempat</li>
+        </ul>
+      </section>
+
+      <!-- kategori -->
+      <section class="categories">
+        <h2>kategori rekomendasi</h2>
+
+        <div class="category-grid">
+
+          <article class="category-card">
+            <h3>🍜 kuliner bogor</h3>
+            <p>
+              rekomendasi tempat makan lokal, umkm, hingga hidden gem yang
+              menawarkan cita rasa khas bogor.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <h3>☕ kafe & nongkrong</h3>
+            <p>
+              tempat ngopi, kerja, dan quality time dengan suasana nyaman
+              dan konsep yang menarik.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <h3>🌿 wisata alam</h3>
+            <p>
+              destinasi alam di bogor dan sekitarnya untuk rehat sejenak
+              dari rutinitas.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <h3>🏡 staycation</h3>
+            <p>
+              villa, penginapan, dan tempat menginap pilihan untuk liburan
+              singkat di bogor.
+            </p>
+          </article>
+
+          <article class="category-card">
+            <h3>✨ hidden gem</h3>
+            <p>
+              tempat unik yang belum banyak diketahui, tapi layak
+              untuk dicoba dan dieksplor.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <!-- footer -->
   <footer class="footer">
-    <p>© 2026 bogorreferences</p>
-    <p>kurasi lokal kuliner, wisata & lifestyle bogor</p>
+    <div class="container footer-content">
+      <p>© 2026 bogorreferences</p>
+      <p>
+        media kurasi lokal seputar kuliner, wisata, dan gaya hidup di bogor.
+        seluruh rekomendasi berdasarkan pengalaman dan riset.
+      </p>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
