@@ -311,3 +311,30 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+/* about team section */
+.about-team {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.about-content .btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .about-team {
+    grid-template-columns: 1fr;
+  }
+}
+
