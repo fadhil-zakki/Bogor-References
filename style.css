@@ -520,4 +520,62 @@ hero background image & overlay
   }
 }
 
+/* =========================
+   Instagram Highlight
+========================= */
+.instagram-highlight {
+  max-width: 900px;
+  margin: auto;
+}
+
+.instagram-card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,.1);
+  transition: transform .3s;
+}
+
+.instagram-card:hover {
+  transform: translatey(-6px);
+}
+
+.ig-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ig-right {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ig-right h3 {
+  margin: .5rem 0;
+  font-size: 1.4rem;
+}
+
+.ig-right p {
+  color: #666;
+}
+
+.ig-cta {
+  margin-top: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+@media (max-width:768px) {
+  .instagram-card {
+    grid-template-columns: 1fr;
+  }
+}
 
