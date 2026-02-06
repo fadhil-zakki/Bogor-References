@@ -162,13 +162,9 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(48px, 7vw, 80px);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  letter-spacing: -0.5px;
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
 }
-
 
 .hero p {
   max-width: 700px;
@@ -214,6 +210,11 @@ hero background image & overlay
 }
 
 /* optional text refinement */
+.hero h1 {
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
 .hero p {
   opacity: 0.9;
 }
@@ -609,4 +610,3 @@ hero background image & overlay
   background: var(--gray);
   font-size: .85rem;
 }
-
