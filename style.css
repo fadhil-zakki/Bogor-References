@@ -145,26 +145,13 @@ img {
 }
 
 /* =========================
-   navbar transparan
+   HERO & PAGE HERO — FINAL
 ========================= */
+.hero,
 .page-hero {
+  position: relative;
+  margin-top: 70px;
   height: 60vh;
-  margin-top: 70px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-}
-/* =========================
-   hero & page hero
-========================= */
-
-.hero {
-  height: 100vh;
-  margin-top: 70px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -175,62 +162,51 @@ img {
   padding: 0 var(--space-sm);
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: var(--space-sm);
-}
-
-.hero p {
-  max-width: 700px;
-  margin: 0 auto var(--space-md);
-  font-size: 1.2rem;
-}
-
-.page-hero {
-  height: 60vh;
-  margin-top: 70px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-}
-
-.page-hero h1 {
-  font-size: 3rem;
-  text-shadow: 0 10px 30px rgba(0,0,0,.4);
-}
-
-/* ==============================
-hero background image & overlay
-================================= */
 .hero {
-  position: relative;
-  background-image: url("assets/images/hero-bogor.jpg");
+  height: 100vh;
 }
 
-.hero::before {
+.hero::before,
+.page-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
 }
 
-.hero > * {
+.hero > *,
+.page-hero > * {
   position: relative;
   z-index: 1;
 }
 
-/* optional text refinement */
-.hero h1 {
-  text-transform: lowercase;
-  letter-spacing: 1px;
+.hero h1,
+.page-hero h1 {
+  font-size: clamp(48px, 7vw, 84px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+  text-shadow: 0 12px 30px rgba(0,0,0,.45);
 }
 
-.hero p {
+.hero p,
+.page-hero p {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
   opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+  }
+
+  .hero h1,
+  .page-hero h1 {
+    font-size: clamp(32px, 9vw, 48px);
+  }
 }
 
 
