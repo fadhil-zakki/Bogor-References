@@ -360,3 +360,15 @@ img {
     display: flex;
   }
 }
+
+/* =========================
+   gambar
+========================= */
+.about-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+  display: block;
+}
