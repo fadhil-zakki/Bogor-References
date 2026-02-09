@@ -463,37 +463,16 @@ img {
   object-fit: contain;
 }
 
-/* ===== FOOTER SOCIAL LIKE ANALOGICHUB ===== */
-.footer-social {
+.simple-footer {
   background: #0b1118;
-  color: #ddd;
-  padding: 2rem 0.7rem;
-  font-size: 0.92rem;
-}
-
-.footer-social-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.footer-social .footer-logo img {
-  width: 60px;
-  object-fit: contain;
-}
-
-.footer-social .footer-center {
+  padding: 2rem 0;
   text-align: center;
-  flex: 1;
-  font-size: 0.95rem;
 }
 
 .footer-social-icons a {
-  color: #fff;
-  font-size: 26px;
-  opacity: 0.8;
+  color: #ffffff;
+  font-size: 28px;
+  opacity: 0.85;
   transition: 0.3s ease;
 }
 
@@ -501,6 +480,13 @@ img {
   opacity: 1;
   transform: scale(1.15);
 }
+
+.footer-bottom {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
 
 
 
