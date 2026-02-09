@@ -463,5 +463,23 @@ img {
   object-fit: contain;
 }
 
+/* ===== SIMPLE FOOTER (IG ONLY) ===== */
+.simple-footer {
+  background: #0b1118;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.ig-only img {
+  width: 42px;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.ig-only img:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
 
 
