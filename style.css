@@ -463,25 +463,46 @@ img {
   object-fit: contain;
 }
 
-
-
-/* ===== FOOTER IG ONLY (REPLACE GET IN TOUCH) ===== */
-.ig-only-footer {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+/* ===== FOOTER SOCIAL LIKE ANALOGICHUB ===== */
+.footer-social {
+  background: #0b1118;
+  color: #ddd;
+  padding: 2rem 0.7rem;
+  font-size: 0.92rem;
 }
 
-.ig-only-footer img {
-  width: 38px;
-  opacity: 0.85;
+.footer-social-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-social .footer-logo img {
+  width: 60px;
+  object-fit: contain;
+}
+
+.footer-social .footer-center {
+  text-align: center;
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.footer-social-icons a {
+  color: #fff;
+  font-size: 26px;
+  opacity: 0.8;
   transition: 0.3s ease;
 }
 
-.ig-only-footer img:hover {
+.footer-social-icons a:hover {
   opacity: 1;
   transform: scale(1.15);
 }
+
+
 
 
 
