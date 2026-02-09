@@ -488,6 +488,44 @@ img {
 }
 
 
+/* ===== ANALOGIC STYLE FOOTER ===== */
+.analogic-footer {
+  background: #0b1118;
+  padding: 1.5rem 0;
+}
+
+.analogic-footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.analogic-footer-logo {
+  height: 32px;
+  opacity: 0.9;
+}
+
+.analogic-footer-ig {
+  color: #fff;
+  font-size: 20px;
+  opacity: 0.75;
+  transition: 0.25s ease;
+}
+
+.analogic-footer-ig:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .analogic-footer-inner {
+    flex-direction: row;
+  }
+}
 
 
 
