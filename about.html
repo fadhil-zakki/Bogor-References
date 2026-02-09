@@ -4,11 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tentang Kami — Bogorreferences</title>
+
+  <!-- CSS UTAMA -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME (ICON IG) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
+
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="navbar">
   <div class="nav-container">
 
@@ -30,14 +42,13 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="page-hero"
-  style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920');">
+<!-- ================= HERO ================= -->
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920');">
   <h1>Tentang Bogorreferences</h1>
   <p>Media kurasi lokal terpercaya seputar kuliner, wisata & lifestyle di Bogor</p>
 </section>
 
-<!-- INTRO -->
+<!-- ================= INTRO ================= -->
 <section class="section">
   <div class="container about-intro">
 
@@ -54,14 +65,14 @@
 
       <p>
         Setiap rekomendasi dibuat berdasarkan pengalaman langsung, riset lapangan,
-        dan kurasi objektif agar informasi tetap jujur, relevan, dan terpercaya.
+        dan kurasi objektif agar informasi tetap jujur dan relevan.
       </p>
     </div>
 
   </div>
 </section>
 
-<!-- VISI MISI -->
+<!-- ================= VISI MISI ================= -->
 <section class="section gray">
   <div class="container vm-grid">
 
@@ -77,8 +88,8 @@
       <h3>Misi</h3>
       <ul>
         <li>Mengkurasi tempat terbaik secara objektif</li>
-        <li>Mendukung pertumbuhan UMKM & bisnis lokal</li>
-        <li>Menjadi jembatan antara brand dan audiens</li>
+        <li>Mendukung UMKM & bisnis lokal</li>
+        <li>Menjadi jembatan brand & audiens</li>
         <li>Menyajikan informasi ringkas & relevan</li>
       </ul>
     </div>
@@ -86,63 +97,23 @@
   </div>
 </section>
 
-<!-- WHY -->
+<!-- ================= WHY ================= -->
 <section class="section">
   <div class="container why-box">
     <h2>Kenapa Bogorreferences?</h2>
     <p>
-      Kami bukan sekadar membagikan tempat, tapi membangun referensi terpercaya
-      melalui kurasi selektif, visual kuat, dan penyampaian yang mudah dipahami.
+      Kami bukan hanya membagikan tempat, tapi membangun referensi terpercaya
+      melalui kurasi selektif dan visual yang menarik.
     </p>
   </div>
 </section>
 
-<!-- INSTAGRAM -->
-<section class="section gray">
-  <div class="container">
-    <h2 class="section-title">Jejak Digital Kami</h2>
-    <div class="underline"></div>
-
-    <div class="card ig-profile" style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap;">
-      <img src="assets/images/logo.png" alt="Instagram Bogorreferences"
-           style="width:120px;border-radius:50%;">
-
-      <div>
-        <h3>@bogorreferences</h3>
-        <p>Media kurasi lokal seputar Bogor — kuliner, wisata & lifestyle</p>
-
-        <div style="margin:1rem 0;">
-          <strong>15k+</strong> Followers • <strong>900+</strong> Konten
-        </div>
-
-        <a href="https://instagram.com/bogorreferences" target="_blank" class="btn">
-          Kunjungi Instagram
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="pro-footer">
-  <div class="container footer-wrap">
-
-    <div class="footer-left">
-      <img src="assets/images/logo.png" alt="Bogorreferences Logo" class="footer-logo">
-    </div>
-
-    <div class="footer-center">
-      <h3>Bogorreferences</h3>
-      <p>Media Referensi Lokal Bogor</p>
-      <p>Kuliner • Wisata • Lifestyle</p>
-    </div>
-    <div class="footer-right ig-only-footer">
-      <a href="https://instagram.com/bogorreferences" target="_blank">
-        <img src="assets/images/instagram-icon.png" alt="Instagram Bogorreferences">
-      </a>
-    </div>
-
-
+<!-- ================= FOOTER (IG ONLY) ================= -->
+<footer class="simple-footer">
+  <div class="footer-social-icons">
+    <a href="https://instagram.com/bogorreferences" target="_blank" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
   </div>
 
   <div class="footer-bottom">
@@ -150,6 +121,12 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<!-- ================= SCRIPT ================= -->
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
