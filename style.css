@@ -527,6 +527,20 @@ img {
   }
 }
 
+/* ===== FOOTER INSTAGRAM ICON ===== */
+.ig-icon {
+  display: inline-block;
+  color: #fff;
+  font-size: 26px;
+  margin-top: 0.5rem;
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.ig-icon:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
 
 
 
