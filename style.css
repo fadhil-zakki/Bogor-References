@@ -303,17 +303,6 @@ img {
   display: block;
 }
 
-/* =========================
-   footer
-========================= */
-
-.footer {
-  background: var(--dark);
-  color: #fff;
-  text-align: center;
-  padding: var(--space-md);
-  font-size: 0.9rem;
-}
 
 /* =========================
    responsive
@@ -408,11 +397,6 @@ img {
   margin-bottom: 1rem;
 }
 
-.ig-icon img {
-  width: 38px;
-  transition: .3s;
-}
-
 .ig-icon img:hover {
   transform: scale(1.15);
 }
@@ -423,14 +407,6 @@ img {
   color: #aaa;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 2.5rem;
-  font-size: .8rem;
-  color: #666;
-  border-top: 1px solid rgba(255,255,255,.08);
-  padding-top: 1rem;
-}
 
 /* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
@@ -450,23 +426,11 @@ img {
 }
 
 /* ===== LOGO ===== */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
 
 .logo-img {
   width: 40px;
   height: 40px;
   object-fit: contain;
-}
-
-.simple-footer {
-  background: #0b1118;
-  padding: 2rem 0;
-  text-align: center;
 }
 
 .footer-social-icons a {
