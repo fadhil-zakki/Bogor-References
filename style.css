@@ -463,20 +463,22 @@ img {
   object-fit: contain;
 }
 
-/* ===== SIMPLE FOOTER (IG ONLY) ===== */
-.simple-footer {
-  background: #0b1118;
-  padding: 2rem 0;
-  text-align: center;
+
+
+/* ===== FOOTER IG ONLY (REPLACE GET IN TOUCH) ===== */
+.ig-only-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.ig-only img {
-  width: 42px;
+.ig-only-footer img {
+  width: 38px;
   opacity: 0.85;
   transition: 0.3s ease;
 }
 
-.ig-only img:hover {
+.ig-only-footer img:hover {
   opacity: 1;
   transform: scale(1.15);
 }
